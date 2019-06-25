@@ -23,7 +23,10 @@ module.exports = function(config) {
       reports: ["html", "lcovonly", "text-summary", "cobertura"],
       fixWebpackSourcePaths: true
     },
-    reporters: ["progress", "kjhtml"],
+    reporters: ["progress", "kjhtml", "junit"],
+    junitReporter: {
+      outputDir: "../junit"
+    },
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
